@@ -1,32 +1,122 @@
 
+:root {
+
+}
+
+/* For Menu */
+
+#header a {
+    font-size: 18px;
+}
 
 
+/* For Landing */
 
-/* For Header */ 
-
-#header {
-    width: 100%;
-    height: 10vh;
-    background-color: rgba(146, 146, 146, .9);
+#sidebarBtn {
     position: fixed;
-    z-index: 2;
 }
 
-/* For Landing Section */
+#landingDiv {
+    height: 100vh;
+    background-color: rgb(102, 102, 102);
+    padding: 1%;
+}
 
-.landing {
+#landingContent {
+    padding: 11%;
+}
+
+#welcomeTextDiv {
+    padding-top: 18%;
+}
+
+#welcomeText {
+    font-size: 70px;
+}
+
+/* For about me */
+
+#aboutMeDiv {
+    height: 100vh;
+}
+
+#aboutMeContent {
     padding: 12%;
-    padding-top: 20%;
-    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fexternal-preview.redd.it%2Fkhpjs2KiMlJZ9TaV4c07p2GaZjCDZDb4pYZ0uKqTRdA.jpg%3Fauto%3Dwebp%26s%3D1e4d06f4d8af6ae76831da4b16bde7cc607c9892&f=1&nofb=1&ipt=046ca87e3c61fffd15c8850bf08eb742e060f754b66cf514c12fc4f6a7d02a4f&ipo=images');
+}
+
+/* For projects */
+
+#projectsDiv {
+    height: 100vh;
+    background-color: rgb(107, 107, 107);
+}
+
+#projectsContent {
+    padding: 12%;
+}
+
+.splideCard {
+    height: 60vh;
+    background-image: url('../imgs/tyrs\ vault\ screenshot.png');
     background-size: cover;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
-#landingWelcome {
-    color: rgb(255, 255, 255);
-    font-size: 60px;
+#splideCardTyrs {
+    height: 60vh;
+    background-image: url('../imgs/tyrs\ vault\ screenshot.png');
+    background-size: cover;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 20%;
 }
 
-#landingSubHeader {
-    color: white;
-    font-size: 40px;
+#splideCardTyrs:hover {
+    -webkit-filter: brightness(50%);
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+/* .tyrsBtn {
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 100%;   
+} */
+
+
+#splideCardBlog {
+    height: 60vh;
+    background-image: url('../imgs/Tech\ blog\ screenshot\ .png');
+    background-size: cover;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+.projectModal {
+    height: 75vh;
+}
+
+.modalImg {
+    height: 70%;
+    background-image: url('../imgs/tyrs\ vault\ screenshot.png');
+    background-size: cover;
+    -webkit-filter: brightness(50%);
+    margin-left: .2%;
+    margin-right: .2%;
+}
+
+.modalContent {
+    padding: 2%;
+}
+
+.titleLink {
+    color: black;
+    font-size: 24px;
+
 }
