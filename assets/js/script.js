@@ -1,3 +1,25 @@
+\// For onscroll animate bars
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // For pie charts 
 window.addEventListener("DOMContentLoaded", () => {
     // update circle when range change

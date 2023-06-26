@@ -11,6 +11,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,300&family=Roboto+Mono&family=Roboto:wght@500&display=swap"
         rel="stylesheet">
@@ -24,13 +27,17 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.2/dist/semantic.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.9.2/dist/semantic.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css"
         integrity="sha512-otONSJGv1l0LjJXcgyqi2MeKXtnthkiXAleeQjFJOKYcVD5u+mOuPb7xCnlsb74Ld+N0ONbP7KYRmW2/OWrvaA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal({ reset: true });
+    </script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 </head>
 
 <body>
@@ -66,10 +73,38 @@
                 <i class="ui bars icon"></i>
             </div>
             <div id="landingContent">
-                <div id="welcomeTextDiv">
-                    <h1 id="welcomeText">Welcome<br> to my portfolio!</h1>
-                    <h3>I'm a web developer from Salt Lake City specializing in all things JavaScript, Node.js, and
-                        Front-End.</h3>
+                <div class="ui stackable grid" id="welcomeTextDiv">
+                    <div class="seven wide column" id="welcomeTextColumn">
+                        <h1 id="welcomeText">Welcome<br> to my portfolio!</h1>
+                        <h3>I'm a web developer from Salt Lake City specializing in all things JavaScript, Node.js, and
+                            Front-End.</h3>
+                    </div>
+                    <div class="four wide column">
+
+                    </div>
+                    <div class="five wide column" id="typedTextDiv">
+                        <div class="ui secondary menu" id="typedDivHeader">
+                            <div class="item">
+                                <h4>portfolio.exe</h4>
+                            </div>
+                            <div class="right menu">
+                                <div class="item">
+                                    <i class="ui large window close outline icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="typedDivContent">
+                            <h5 id="typedDivContentH3"></h5>
+                        </div>
+                        <script>
+                            var typed = new Typed('#typedDivContentH3', {
+                                strings: ['$ git clone git@github.com:carreejoh/RealPortfolio.git ^1000 <br> `Cloning into "RealPortfolio"...` <br> ^750 remote: Enumerating objects: 35, done. <br> ^340 remote: Counting objects: 100% (35/35), done. ^340 remote: Compressing objects: 100% (28/28), done. <br> <br> ^600 Receiving objects: 100% (35/35), 1.84 MiB | 4.42 MiB/s, done. <br> Resolving deltas: 100% (5/5), done. <br> ^800 Carter Johnson@DESKTOP-V1K9QCU MINGW64 ~/websites/portfolio <br> ^100 $ cd RealPortfolio/ <br> ^460 Carter Johnson@DESKTOP-V1K9QCU MINGW64 ~/websites/portfolio ^320 <br> $ code . ^20 <br> loading Carree-Portfolio...'],
+                                loop: true,
+                                loopCount: Infinity,
+                                backDelay: 3000,
+                            });
+                        </script>
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,32 +114,67 @@
             </div>
             <div id="aboutMeContent">
                 <div class="ui stackable grid">
-                    <!-- <div class="four wide column" id="skillsSection">
-                        <div class="ui stackable grid">
-                            <div class="eight wide column">
+
+                    <div class="four wide column topSkillsColumn">
+                        <div class="ldBar massive label-center" data-value="90" data-preset="circle"
+                            id="circularSkills1" style="height:100%; width:100%" data-transition-in="1">
+                        </div>
+                      
+                    </div>
+                    <div class="four wide column">
+                        <div class="ldBar massive label-center" data-value="85" data-preset="circle"
+                            id="circularSkills2" style="height:100%; width:100%" data-transition-in="1">
+                        </div>
+                    </div>
+                    <div class="four wide column">
+                        <div class="ldBar massive label-center" data-value="80" data-preset="circle"
+                            id="circularSkills3" style="height:100%; width:100%;" data-transition-in="1">
+                        </div>
+                    </div>
+                    <div class="four wide column">
+                        <div class="ldBar massive label-center" data-value="70" data-preset="circle"
+                            id="circularSkills4" style="height:100%; width:100%" data-transition-in="1">
+                        </div>
+
+                    </div>
+                    <div class="four wide column" id="skillsSection">
+                        <!-- <div class="ui stackable grid">
+                            <div class="eight wide column topSkillsColumn">
                                 <div class="ldBar massive label-center" data-value="90" data-preset="circle"
-                                    id="circularSkills" style="height:100%; width:100%">
+                                    id="circularSkills1" style="height:100%; width:100%">
                                 </div>
                             </div>
                             <div class="eight wide column">
                                 <div class="ldBar massive label-center" data-value="85" data-preset="circle"
-                                    id="circularSkills" style="height:100%; width:100%">
+                                    id="circularSkills2" style="height:100%; width:100%">
                                 </div>
                             </div>
                             <div class="eight wide column">
                                 <div class="ldBar massive label-center" data-value="80" data-preset="circle"
-                                    id="circularSkills" style="height:100%; width:100%;">
+                                    id="circularSkills3" style="height:100%; width:100%;">
                                 </div>
                             </div>
                             <div class="eight wide column">
                                 <div class="ldBar massive label-center" data-value="70" data-preset="circle"
-                                    id="circularSkills" style="height:100%; width:100%">
+                                    id="circularSkills4" style="height:100%; width:100%">
                                 </div>
                             </div>
-                        </div>
-                    </div> -->
+                        </div> -->
+                    </div>
                     <script>
-                        ScrollReveal().reveal('#welcomeText', { delay: 300 });
+                        var circle1options = {
+                            wait: '2s',
+                            move: '70px',
+                            scale:  { direction: 'up', power: '40%' }
+                        }
+                        var circle2options = {
+                            move: '70px',
+                            scale:  { direction: 'up', power: '40%' },
+                            wait: '6s'
+                        }
+                        ScrollReveal(circle2options);
+                        ScrollReveal().reveal('#circularSkills1', { wait: 5800 } );
+                        ScrollReveal().reveal('#circularSkills2', circle2options);
                     </script>
                 </div>
             </div>
@@ -172,19 +242,18 @@
                 </div>
             </div>
         </div>
-    </div>
-    <script>
-        $('.ui.sidebar')
-            .sidebar('attach events', '#sidebarBtn')
-            .sidebar('setting', 'transition', 'overlay')
-            .sidebar('toggle')
-            ;
-    </script>
-    <!-- <script>
+        <script>
+            $('.ui.sidebar')
+                .sidebar('attach events', '#sidebarBtn')
+                .sidebar('setting', 'transition', 'overlay')
+                .sidebar('toggle')
+                ;
+        </script>
+        <!-- <script>
         AOS.init();
       </script> -->
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/loading.js"></script>
+        <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/loading.js"></script>
 </body>
 
 </html>
