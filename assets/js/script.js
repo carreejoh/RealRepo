@@ -1,4 +1,4 @@
-\// For onscroll animate bars
+// For onscroll animate bars
 
 
 
