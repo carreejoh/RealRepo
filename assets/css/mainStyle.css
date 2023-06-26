@@ -1,6 +1,6 @@
 
 :root {
-
+    --darkGray: #2c2c2c;
 }
 
 /* For Menu */
@@ -18,7 +18,7 @@
 
 #landingDiv {
     height: 100vh;
-    background-color: rgb(102, 102, 102);
+    background-color: var(--darkGray);
     padding: 1%;
 }
 
@@ -27,22 +27,47 @@
 }
 
 #welcomeTextDiv {
-    padding-top: 18%;
+    padding-top: 15%;
 }
 
 #welcomeText {
-    font-size: 70px;
+    font-size: 90px;
+    line-height: 80px;
+    color: white;
 }
 
 /* For about me */
+
+#aboutMeH2 {
+    text-align: center;
+}
+
+#aboutMeH2 h2 {
+    font-size: 3em;
+}
 
 #aboutMeDiv {
     height: 100vh;
 }
 
 #aboutMeContent {
-    padding: 12%;
+    padding-left: 15%;
+    padding-right: 15%;
 }
+
+#skillsSection {
+    background-color: rgb(145, 145, 145);
+    border: solid 3px black;
+    border-radius: 10px;
+}
+
+.ldBar path.mainline {
+    stroke: rgb(230, 205, 66);
+    stroke-linecap: round;
+    stroke-width: 5;
+  }
+ 
+
 
 /* For projects */
 

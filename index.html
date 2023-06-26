@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carreejoh Portfolio</title>
     <link rel="stylesheet" href="./assets/css/mainStyle.css">
+    <link rel="stylesheet" href="./assets/css/loading.css">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,300&family=Roboto+Mono&family=Roboto:wght@500&display=swap"
         rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,300&family=Roboto+Mono&family=Roboto:wght@800&family=Turret+Road:wght@500&display=swap"
         rel="stylesheet">
@@ -27,6 +29,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css"
         integrity="sha512-otONSJGv1l0LjJXcgyqi2MeKXtnthkiXAleeQjFJOKYcVD5u+mOuPb7xCnlsb74Ld+N0ONbP7KYRmW2/OWrvaA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
@@ -47,6 +51,7 @@
             <a class="item">
                 Experimental
             </a>
+
             <div class="ui right menu">
                 <a class="item"><i class="ui very large github icon"></i></a>
                 <a class="item"><i class="ui very large mail icon"></i></a>
@@ -69,8 +74,39 @@
             </div>
         </div>
         <div id="aboutMeDiv">
-            <div id="aboutMeContent">
+            <div id="aboutMeH2">
                 <h2>About Me:</h2>
+            </div>
+            <div id="aboutMeContent">
+                <div class="ui stackable grid">
+                    <!-- <div class="four wide column" id="skillsSection">
+                        <div class="ui stackable grid">
+                            <div class="eight wide column">
+                                <div class="ldBar massive label-center" data-value="90" data-preset="circle"
+                                    id="circularSkills" style="height:100%; width:100%">
+                                </div>
+                            </div>
+                            <div class="eight wide column">
+                                <div class="ldBar massive label-center" data-value="85" data-preset="circle"
+                                    id="circularSkills" style="height:100%; width:100%">
+                                </div>
+                            </div>
+                            <div class="eight wide column">
+                                <div class="ldBar massive label-center" data-value="80" data-preset="circle"
+                                    id="circularSkills" style="height:100%; width:100%;">
+                                </div>
+                            </div>
+                            <div class="eight wide column">
+                                <div class="ldBar massive label-center" data-value="70" data-preset="circle"
+                                    id="circularSkills" style="height:100%; width:100%">
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <script>
+                        ScrollReveal().reveal('#welcomeText', { delay: 300 });
+                    </script>
+                </div>
             </div>
         </div>
         <div id="projectsDiv">
@@ -85,25 +121,25 @@
                                     <div id="splideCardTyrs">
                                         <!-- <img src="./assets/imgs/Tech blog screenshot .png"> -->
                                     </div>
-                                    <button class="tyrsBtn">Learn More</button> 
+                                    <button class="tyrsBtn">Learn More</button>
                                 </li>
                                 <li class="splide__slide">
                                     <div id="splideCardBlog">
                                         <!-- <img src="./assets/imgs/Tech blog screenshot .png"> -->
                                     </div>
-                                    <button class="tyrsBtn">Learn More</button> 
+                                    <button class="tyrsBtn">Learn More</button>
                                 </li>
                                 <li class="splide__slide">
                                     <div id="splideCardTyrs">
                                         <!-- <img src="./assets/imgs/Tech blog screenshot .png"> -->
                                     </div>
-                                    <button class="tyrsBtn">Learn More</button>       
+                                    <button class="tyrsBtn">Learn More</button>
                                 </li>
                                 <li class="splide__slide">
                                     <div class="splideCard">
                                         <!-- <img src="./assets/imgs/Tech blog screenshot .png"> -->
                                     </div>
-                                    <button class="tyrsBtn">Learn More</button> 
+                                    <button class="tyrsBtn">Learn More</button>
                                 </li>
                             </ul>
                         </div>
@@ -123,7 +159,8 @@
                         </div>
                         <div class="modalContent">
                             <a href="#" class="titleLink">Tyrs Vault</a>
-                            <p>Welcome to your one-stop-shop for connecting with friends and highlighting the games you like!</p>
+                            <p>Welcome to your one-stop-shop for connecting with friends and highlighting the games you
+                                like!</p>
                         </div>
                     </div>
                     <script>
@@ -143,6 +180,11 @@
             .sidebar('toggle')
             ;
     </script>
+    <!-- <script>
+        AOS.init();
+      </script> -->
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/loading.js"></script>
 </body>
 
 </html>
