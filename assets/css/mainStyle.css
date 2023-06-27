@@ -4,6 +4,7 @@
     --lightpurple: #d042f8;
     --brightPink: #f10983;
     --lightBlue: #2dcbdc;
+    --codeGreen: rgb(31, 163, 14);
     font-family: 'Bangers', cursive;
     font-family: 'Barlow', sans-serif;
     font-family: 'Nunito Sans', sans-serif;
@@ -15,25 +16,72 @@
 
 /* For Menu */
 
-#header a {
-    font-size: 18px;
+#mainHeader a {
+    font-size: 20px;
     font-family: 'Source Code Pro', monospace;
-    font-weight: 500;
+    font-weight: 700;
+    color: white;
+    /* border: solid rgb(27, 180, 27);
+    border-width: 0px 0px 3px 0px;
+    border-radius: 0px; */
+    padding: 3px;
+
+    background: linear-gradient(to right top, var(--codeGreen), var(--codeGreen) 50%, white 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 250% 250%;
+    background-position: 100%;
+    transition: background-position 275ms ease;
 }
 
-#header h1 {
-    /* border: solid var(--brightPink);
-    border-width: 0px 0px 3px 0px; */
+#mainHeader a:hover {
+    background-position: 0 100%;
+    cursor: pointer;
+}
+
+#mainHeader {
+    z-index: 5;
+    position: fixed;
+    width: 100%;
+    padding-left: 12%;
+    padding-right: 12%;
+    /* background-color: rgba(160, 36, 190, 0.4); */
+}
+
+#mainHeader h1 {
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+}
+
+#socialLinks {
+    height: 100vh;
+    position: fixed;
+    z-index: 7;
+    width: 3vw;
+    padding-top: 20%;
+}
+
+#socialLinks a {
+    color: rgb(201, 201, 201);
+    transition: all .1s ease-in-out;
+}
+
+#socialLinks a:hover {
+    scale: 1.1;
 }
 
 /* For Landing */
 
 #landingContant a {
-    color: rgb(43, 177, 16);
+    color: rgb(255, 255, 255);
 }
 
 #sidebarBtn {
     position: fixed;
+    z-index: 10;
+    margin-left: 1%;
+    margin-top: 1%;
 }
 
 #landingDiv {
@@ -45,6 +93,7 @@
 
 #landingContent {
     padding: 11%;
+    padding-bottom: 0%;
 }
 
 #welcomeTextDiv {
@@ -78,8 +127,10 @@
     border: solid black;
     border-radius: 10px;
     box-shadow: rgba(208, 66, 248, .6) 5px 5px, rgba(208, 66, 248, .45) 10px 10px, rgba(208, 66, 248, .2) 15px 15px;
+    /* box-shadow: rgba(63, 241, 57, 0.6) 5px 5px, rgba(71, 221, 34, 0.45) 10px 10px, rgba(29, 194, 65, 0.2) 15px 15px; */
     animation-timing-function: ease-in-out;
-    animation: bounceDiv 4s infinite;
+    animation: bounceDiv 3.5s infinite;
+    
 }
 
 
@@ -98,9 +149,9 @@
     /* color: var(--lightpurple); */
 }
 
-#typedDivContent {
-    height: 100%;
-}
+/* #typedDivContent {
+    height: 90%;
+} */
 
 #typedDivContentH3 {
     font-family: 'Source Code Pro', monospace;
@@ -117,14 +168,25 @@
     margin-top: 0%;
 }
 
+#downwardArrowDiv {
+    text-align: center;
+    width: 100%;
+    padding-top: 10%;
+}
+
+#downwardArrowDiv i {
+    color: white;
+}
+
 /* For about me */
 
 #aboutMeH2 {
     text-align: center;
+    padding-top: 10%;
 }
 
 #aboutMeH2 h2 {
-    font-size: 3em;
+    font-size: 3.5em;
     color: white;
     font-family: 'Source Code Pro', monospace;
 }
@@ -137,75 +199,177 @@
 #aboutMeContent {
     padding-left: 20%;
     padding-right: 20%;
-    padding-top: 10%;
+    padding-top: 1%;
 }
 
 #pictureAbout {
-    padding-top: 4%;
+    padding-top: 8%;
+    padding-left: 8%;
+    padding-right: 8%;
 }
 
-#skillsSection {
-    background-color: rgb(145, 145, 145);
-    border: solid 3px black;
+.aboutColumn {
+    background-color: rgb(102, 102, 102);
+    border: solid 3px rgb(0, 0, 0);
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.6) -5px 5px, rgba(0, 0, 0, 0.45) -10px 10px;
 }
+
+.aboutColumn h4 {
+    font-size: 1.3em;
+}
+
+#contactDiv {
+    margin: 4%;
+}
+
+
+
+
+
+
+
+
+
 
 .topSkillsColumn {}
 
-/* .ldBar path.mainline {
-    stroke: rgb(230, 205, 66);
+.ldBar path.mainline {
     stroke-linecap: round;
-    stroke-width: 5;
+    stroke-width: 4;
   }
+
+#circularSkills1 path.mainline{
+    stroke: rgb(230, 205, 66);
+}
+#circularSkills2 path.mainline{
+    stroke: rgb(230, 205, 66);
+}
+#circularSkills3 path.mainline{
+    stroke: rgb(230, 205, 66);
+}
+#circularSkills4 path.mainline{
+    stroke: rgb(230, 205, 66);
+}
 
 /* For each ldBar animation */
 
+.ldBar {
+    transition: all .2s ease-in-out;
+}
 
-/* .favSkills {
+.ldBar:hover {
+    scale: 1.17;
+}
+
+.favSkills {
     opacity: 0;
     transform: translateY(50%);
     transition: all .5s;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    text-align: center;
 }
 
 .favSkills:nth-child(2)  {
-    transition-delay: 200ms;
+    transition-delay: 100ms;
 }
 
 .favSkills:nth-child(3) {
-    transition-delay: 400ms;
+    transition-delay: 300ms;
 }
 
 .favSkills:nth-child(4)  {
+    transition-delay: 500ms;
+}
+
+.favSkills:nth-child(5)  {
     transition-delay: 600ms;
 }
 
 .show {
     opacity: 1;
     transform: translateY(0);
-} */
-
-#pictureAbout {
-    height: 50vh;
 }
+
+.ldBar-label {
+    color: white;
+    font-size: 2em;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.circularSkillsText {
+    font-family: 'Source Code Pro', monospace;
+    color: white;
+    font-size: 1.4em;
+    margin-bottom: 0px;
+}
+
+/* For Skills Section */
 
 #skillsDiv {
+    background-image: url('../imgs/skills\ wallpaper.png');
+    background-size: cover;
+    height: 100vh;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10%;
+    padding-bottom: 2%;
     text-align: center;
+    color: white;
 }
 
-#skillsDiv h4 {
-    font-size: 30px;
+#favSkillsDiv h3 {
+    font-size: 28px;
 }
 
-#topIconGrid {
-    width: 100%;
-    margin-left: 6%;
+#skillsContent {
+    /* background-color: rgba(0, 0, 0, 1);
+    border: solid 14px rgb(88, 74, 74);
+    border-radius: 50px; */
+    padding-top: 2%;
 }
 
-#bottomIconGrid {
-    width: 100%;
+#skillsH2 h2 {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 3.5em;
+    color: white;
+}
+
+#skillsH2 {
+    padding-bottom: 5%;
+    /* display: none; */
+}
+
+#skillsH2 p {
+    font-size: 1.2em;
+}
+
+#techList {
+    
+}
+
+#techList h3 {
+    font-size: 28px;
+}
+
+#techList h5 {
+    font-size: 1.2em;
+}
+
+/* #logoList div {
+    width: 10%;
+} */
+
+.logoImg {
+    width: 10%;
+    width: fit-content;
+}
+
+#skillsGrid {
+    padding-bottom: 4%;
+}
+
+.showSkills {
+    display: block;
 }
 
 
@@ -213,11 +377,12 @@
 
 #projectsDiv {
     height: 100vh;
-    background-color: rgb(107, 107, 107);
+    background-color: var(--darkGray);
 }
 
 #projectsContent {
     padding: 12%;
+    padding-bottom: 1%;
 }
 
 .splideCard {

@@ -9,7 +9,7 @@ const circularBar = document.querySelectorAll('.favSkills');
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        if(entry.isIntersecting) {
+        if (entry.isIntersecting) {
             entry.target.classList.add('show');
         } else {
             entry.target.classList.remove('show');
@@ -18,3 +18,10 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 circularBar.forEach((el) => observer.observe(el));
+
+
+const skillsHeader = document.querySelector("#skillsH2");
+const skillsGrid = document.querySelector("#skillsGrid");
+
+
+window.addEventListener("scroll", techObserver.observe(skillsGrid));
